@@ -1,0 +1,7 @@
+platform: linux
+image: "docker:///node#4.2.3"
+inputs:
+  - name: GitRepoCIPipeline
+    path: .
+run:
+  path: ./pipeline/install.sh

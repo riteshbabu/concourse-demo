@@ -1,0 +1,16 @@
+resources:
+  - name: GitRepoCIPipeline
+    type: git
+    source:
+      uri: https://github.com/riteshbabu/concourse-demo.git
+      branch: master
+
+jobs:
+- name: test
+  plan:
+  - get: GitRepoCIPipeline
+    trigger: true
+  - task: install
+    file: GitRepoCIPipeline/pipeline/install.yml
+  - task: test
+    file: GitRepoCIPipeline/pipeline/test.yml
