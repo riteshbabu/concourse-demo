@@ -1,5 +1,5 @@
 resources:
-  - name: GitRepoCIPipeline
+  - name: sources
     type: git
     source:
       uri: https://github.com/riteshbabu/concourse-demo.git
@@ -8,9 +8,9 @@ resources:
 jobs:
 - name: test
   plan:
-  - get: GitRepoCIPipeline
+  - get: sources
     trigger: true
   - task: install
-    file: GitRepoCIPipeline/pipeline/install.yml
+    file: sources/pipeline/install.yml
   - task: test
-    file: GitRepoCIPipeline/pipeline/test.yml
+    file: sources/pipeline/test.yml
