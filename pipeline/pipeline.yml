@@ -10,7 +10,7 @@ jobs:
   plan:
   - get: sources
     trigger: true
-  - task: install
-    file: sources/pipeline/install.yml
+ # - task: install
+ #   file: sources/pipeline/install.yml
   - task: test
     file: sources/pipeline/test.yml
