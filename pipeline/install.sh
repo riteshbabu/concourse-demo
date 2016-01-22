@@ -1,2 +1,3 @@
 #!/bin/sh
-sudo npm install
+export PATH=$PATH:./pipeline/install.sh
+npm install
