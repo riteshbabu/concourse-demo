@@ -4,4 +4,4 @@ image: "docker:///node#4.2.3"
   #- name: install
 #    path: .
 run:
-  path: ./pipeline/test.sh
+  path: sources/pipeline/test.sh
